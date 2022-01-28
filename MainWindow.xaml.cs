@@ -50,19 +50,40 @@ namespace WpfAppLab3
         {
            
                 
+              if (textbox.FontWeight == FontWeights.Normal)
+            {
                 textbox.FontWeight = FontWeights.Bold;
+            }
+            else
+            {
+                textbox.FontWeight = FontWeights.Normal;
+            }
             
             
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            textbox.FontStyle = FontStyles.Italic;
+            if (textbox.FontStyle == FontStyles.Normal)
+            {
+                textbox.FontStyle = FontStyles.Italic;
+            }
+            else
+            {
+                textbox.FontStyle = FontStyles.Normal;
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            textbox.TextDecorations = TextDecorations.Underline;
+           if (textbox.TextDecorations == TextDecorations.Underline)
+            {
+                textbox.TextDecorations = new TextDecorationCollection();
+            }
+            else
+            {
+                textbox.TextDecorations = TextDecorations.Underline;
+            }
         }
 
         private void RadioButton_Click(object sender, RoutedEventArgs e)
